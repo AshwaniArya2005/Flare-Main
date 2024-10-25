@@ -74,6 +74,16 @@ function closeLoginForm() {
     document.getElementById("loginModal").style.display = "none";
 }
 
+// Open the login popup
+function opencustomercare() {
+    document.getElementById("loginModal1").style.display = "flex";
+}
+
+// Close the login popup
+function closecustomercare() {
+    document.getElementById("loginModal1").style.display = "none";
+}
+
 
 // Initialize cart count
 let cartCount = 0;

@@ -108,3 +108,12 @@ document.querySelectorAll('.qty-btn').forEach(button => {
         input.value = currentValue;
     });
 });
+
+
+
+<label for="Available Locations">Location Availability:</label>
+            <input type="location" id="location" name="location" placeholder="Enter Location" required>
+
+            <label for="Talk To Us">Talk To Us: 123-456-7890</label>
+
+            <button type="submit">Submit</button>

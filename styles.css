@@ -26,6 +26,20 @@ header {
     overflow: hidden;
 }
 
+.modal1 {
+    display: none; 
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .modal-content {
     background-color: #8C0000;
     margin: auto;
@@ -88,24 +102,6 @@ button[type=submit]:hover {
     to {opacity: 1; transform: scale(1);}
 }
 
-/* Notification styling */
-.notification {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 1000;
-}
-
-/* Show the notification */
-.notification.show {
-    opacity: 1;
-}
 
 .top-bar {
     background-color: #8C0000;
@@ -114,6 +110,19 @@ button[type=submit]:hover {
     justify-content: space-between;
     padding: 10px ;
 }
+
+.custom-link {
+    color: white;  
+    text-decoration: none;  
+    transition: transform 0.3s ease, color 0.3s ease;  
+    transform-origin: center;  
+}
+
+.custom-link:hover {
+    transform: scale(1.045); 
+    color: white; 
+}
+
 
 .main-header {
     display: flex;
@@ -142,7 +151,7 @@ h1 {
 
 .search-bar button img {
     width: 16px; 
-    height: 15px;
+    height: 15.5px;
 }
 
 .search-bar button {
@@ -313,6 +322,11 @@ nav ul li a {
     padding: 20px;
 }
 
+.subcat {
+    text-align: center;
+    padding: 25px;
+}
+
 .slider-container {
     display: flex;
     align-items: center;
@@ -355,16 +369,16 @@ nav ul li a {
 .product-box {
     border: 1px solid #ddd;
     padding: 20px;
-    margin: 0 14px;
+    margin: 0 10px;
     text-align: center;
     background-color: #fff;
 }
 
 .badge {
-    display: inline-block;
-    background-color: red;
+    background-color: #EB1414;
     color: white;
-    padding: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 12px;
     position: relative;
     top: -10px;
@@ -372,9 +386,14 @@ nav ul li a {
 }
 
 .price {
-    color: red;
     font-size: 18px;
-    margin: 10px 0;
+    color: #232323;
+}
+
+.price s {
+    color: #707070;
+    font-size: 16px;
+    margin-right: 10px; /* Space between the old and new price */
 }
 
 .quantity {
@@ -389,40 +408,64 @@ nav ul li a {
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-    font-size: 18px;
 }
 
 .quantity input {
-    width: 40px;
+    width: 30px;
     text-align: center;
     border: 1px solid #ddd;
+    padding: 5px;
     margin: 0 5px;
 }
 
-.qty-btn:hover {
-    background-color: #ccc;
-}
 
 .add-to-cart {
-    background-color: black;
+    background-color: #ff0000;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px;
-    width: 100%;
 }
 
-.shop-deals-btn {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    font-size: 18px;
+.add-to-cart:hover {
+    background-color: #000000; /* Darken button on hover */
 }
+
+/* Shop Best Deals Button */
+.shop-deals-btn {
+    margin-top: 20px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.shop-deals-btn:hover {
+    background-color: #000000; /* Darken button on hover */
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8C0000;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
 
 .responsive-image {
     width: 100%;

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <!-- Top Bar -->
+        <div class="top-bar">
+            <a href="#">About Us</a>
+            <a href="#">Customer Support</a>
+            <span>Get 20% off your first order.</span>
+    <!-- Login Button -->
+<a onclick="openLoginForm()"><img src="images/login.png" alt="Log In"></a>
+
+    <!-- The Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeLoginForm()">&times;</span>
+        <h2>Login</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</div>
+        </div>
+    <!-- Main Header-->    
+        <div class="main-header">
+            <h1>Clovers.</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search a product e.g. milk">
+                <button><img src="images/search-icon.png" alt="Search"></button>
+            </div>
+            <div class="icons">
+                <a href="#"><img src="images/location-icon.png" alt="Location"></a>
+                <a href="#"><img src="images/wishlist-icon.png" alt="Wishlist"></a>
+                <div class="cart-icon">
+                    <img src="images/cart-icon.png" alt="Cart">
+                    <span id="cart-count">0</span> <!-- This is the element that displays the cart count -->
+                </div>
+
+    <!-- Notification -->
+        <div id="cart-notification" class="notification">Item added to Cart</div>
+            </div>
+        </div>
+
+    <!-- Navigation bar with dropdowns -->
+        <nav>
+            <ul>
+                <li><a href="#">Deals</a></li>
+                <li class="dropdown">
+                    <a href="#">Food</a>
+                    <ul class="dropdown-content">
+                        <li><a href="vegetables.html">Vegetables</a></li>
+                        <li><a href="fruit.html">Fruit</a></li>
+                        <li><a href="sweet.html">Sweet Tooth</a></li>
+                        <li><a href="munchies.html">Chips & Crisps</a></li>
+                        <li><a href="dairy.html">Dairy & Eggs</a></li>
+                        <li><a href="bakery.html">Bakery</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Beverages</a>
+                    <ul class="dropdown-content">
+                        <li><a href="tea.html">Tea</a></li>
+                        <li><a href="coffee.html">Coffee</a></li>
+                        <li><a href="drink.html">Soft Drinks</a></li>
+                        <li><a href="wine.html">Wine</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Household</a>
+                    <ul class="dropdown-content">
+                        <li><a href="home.html">Home and Kitchen</a></li>
+                        <li><a href="clean.html">Cleaning Supplies</a></li>
+                        <li><a href="office.html">Office Appliances</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Personal Care</a>
+                    <ul class="dropdown-content">
+                        <li><a href="personal.html">Personal Hygiene</a></li>
+                        <li><a href="baby.html">Baby Care</a></li>
+                        <li><a href="pet.html">Pet Care</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Sports</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cricket.html">Cricketn</a></li>
+                        <li><a href="badminton.html">Badminton</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Gym</a>
+                    <ul class="dropdown-content">
+                        <li><a href="supplements.html">Supplements</a></li>
+                        <li><a href="equipments.html">Equipments</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Background -->
+    <div class="slider">
+        <div class="slide active" style="background-image: url('images/slider1.jpg');"></div>
+        <div class="slide" style="background-image: url('images/slider2.jpg');"></div>
+        <div class="slide" style="background-image: url('images/slider3.jpg');"></div>
+    </div>
+    
+    <!-- Features -->
+    <div class="features-section">
+        <div class="feature-item">
+            <img src="images/truck.png" alt="Free Delivery">
+            <div class="feature-text">
+                <h3>Free Delivery</h3>
+                <p>To Your Door</p>
+            </div>
+        </div>
+    
+        <div class="divider"></div>
+    
+        <div class="feature-item">
+            <img src="images/basket.png" alt="Local Pickup">
+            <div class="feature-text">
+                <h3>Local Pickup</h3>
+                <p>Check Out <a href="#">Locations</a></p>
+            </div>
+        </div>
+    
+        <div class="divider"></div>
+    
+        <div class="feature-item">
+            <img src="images/support.png" alt="Available for You">
+            <div class="feature-text">
+                <h3>Available for You</h3>
+                <p><a href="#">Online Support</a> 24/7</p>
+            </div>
+        </div>
+    
+        <div class="divider"></div>
+    
+        <div class="feature-item">
+            <img src="images/phone.png" alt="Order on the Go">
+            <div class="feature-text">
+                <h3>Order on the Go</h3>
+                <p><a href="#">Download</a> Our App</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Deals -->
+    <section class="best-deals">
+        <h2>Best Deals</h2>
+        <div class="slider-container">
+            <!-- Navigation Buttons for first section -->
+            <button class="prev" onclick="moveSlide(-1, 'slider1')">&#10094;</button>
+    
+            <div class="slider1">
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/almond.jpg" alt="almond" class="responsive-image">
+                        <h3>Almonds (200g)</h3>
+                        <p class="price"><s>₹420</s> ₹365</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Repeat for other products -->
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/Maggi.jpg" alt="Maggi" class="responsive-image">
+                        <h3>Maggi</h3>
+                        <p class="price"><s>₹84.99</s> ₹74.99</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Add more products as needed -->
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/Coca Cola.jpg" alt="Coca Cola" class="responsive-image">
+                        <h3>Coca Cola</h3>
+                        <p class="price"><s>₹59.99</s> ₹45.99</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/chips.png" alt="Chips" class="responsive-image">
+                        <h3>Chips</h3>
+                        <p class="price"> ₹20-₹50</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/biscuit.png" alt="Biscuit" class="responsive-image">
+                        <h3>Biscuit</h3>
+                        <p class="price"> ₹20-₹50</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Navigation Buttons for first section -->
+            <button class="next" onclick="moveSlide(1, 'slider1')">&#10095;</button>
+        </div>
+        <button class="shop-deals-btn">Shop Best Deals</button>
+    </section>
+    
+    <!-- Best Deals -->
+    <section class="best-deals">
+        <div class="slider-container">
+            <!-- Navigation Buttons for second section -->
+            <button class="prev" onclick="moveSlide(-1, 'slider2')">&#10094;</button>
+    
+            <div class="slider2">
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/dettol.png" alt="Dettol" class="responsive-image">
+                        <h3>Dettol</h3>
+                        <p class="price"><s>₹59.99</s> ₹45.99</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Repeat for other products -->
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/soap.png" alt="Soap" class="responsive-image">
+                        <h3>Soap</h3>
+                        <p class="price"><s>₹59.99</s> ₹45.99</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/towel.png" alt="towel" class="responsive-image">
+                        <h3>Towel</h3>
+                        <p class="price"><s>₹500 </s> ₹458</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Add more products as needed -->
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/bottle.png" alt="Bottle" class="responsive-image">
+                        <h3>Bottle</h3>
+                        <p class="price"><s>₹59.99</s> ₹45.99</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-slide">
+                    <div class="product-box">
+                        <span class="badge">Best Deal</span>
+                        <img src="images/shampoo.png" alt="Shampoo" class="responsive-image">
+                        <h3>Shampoo</h3>
+                        <p class="price"><s>₹135</s> ₹115</p>
+                        <div class="quantity">
+                            <button class="qty-btn minus">-</button>
+                            <input type="text" value="1" readonly>
+                            <button class="qty-btn plus">+</button>
+                        </div>                        
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Buttons for second section -->
+            <button class="next" onclick="moveSlide(1, 'slider2')">&#10095;</button>
+        </div>
+    </section>
+
+    <div id="cart-notification" class="notification">Item added to cart</div>
+
+    <div class="image-container">
+        <img src="images/ad.png" alt="Responsive Image" class="responsive-image">
+    </div>
+
+    <footer>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2>Clovers.</h2>
+                    <p>Need Help?</p>
+                    <p>Visit our <a href="#">Customer Support</a> or call us at <br> 123-456-7890</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                        <a href="#"><img src="images/insta-icon.png" alt="Instagram"></a>
+                        <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                        <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+                    </div>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Menu</h3>
+                    <ul>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Beverages</a></li>
+                        <li><a href="#">Household</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Most Popular</a></li>
+                        <li><a href="#">My Orders</a></li>
+                        <li><a href="#">Book Online</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Vegetables</a></li>
+                        <li><a href="#">Bakery</a></li>
+                        <li><a href="#">Wine</a></li>
+                        <li><a href="#">Dairy & Eggs</a></li>
+                        <li><a href="#">Munchies</a></li>
+                        <li><a href="#">Soft Drinks</a></li>
+                        <li><a href="#">Cleaning Supplies</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Info</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Locations</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>My Choice</h3>
+                    <ul>
+                        <li><a href="#">Favorites</a></li>
+                        <li><a href="#">My Orders</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <img src="images/mastercard.jpg" alt="Mastercard">
+                    <img src="images/visa.png" alt="Visa">
+                    <img src="images/amex.png" alt="American Express">
+                    <img src="images/paypal.png" alt="Paypal">
+                </div>
+        
+                <div class="footer-links">
+                    <a href="#">Shipping & Returns</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Payment Methods</a>
+                </div>
+            </div>
+        </footer>
+        <p>&copy; 2024 Food Store. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
