@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styling for the feedback form */
+        .feedback-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-container h1 {
+            text-align: center;
+            color: #EB1414;
+            margin-bottom: 20px;
+        }
+
+        .feedback-container p {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .feedback-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feedback-container form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .feedback-container form input,
+        .feedback-container form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .feedback-container form button {
+            padding: 10px 15px;
+            background-color: #EB1414;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .feedback-container form button:hover {
+            background-color: #c00000;
+        }
+
+        .feedback-container .footer-note {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .feedback-container .footer-note a {
+            color: #EB1414;
+            text-decoration: none;
+        }
+
+        .feedback-container .footer-note a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <header>
+        <div class="top-bar">
+            <a href="../index.html" class="responsive-image custom-link">Home</a>
+            <a href="feedback.html" class="responsive-image custom-link">Feedback</a>
+            <a href="#" class="responsive-image custom-link" id="opencustomer">Customer Support</a>
+        </div>
+    </header>
+
+    <!-- Feedback Form -->
+    <div class="feedback-container">
+        <h1>Feedback</h1>
+        <p>We value your feedback! Please fill out the form below, and we’ll get back to you shortly.</p>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your feedback here" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div class="footer-note">
+            <p>Need help? Visit our <a href="index.html">Customer Support</a>.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Food Store. All rights reserved.</p>
+        <footer>
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h2>Clovers.</h2>
+                        <p>Need Help?</p>
+                        <p>Visit our <a href="#">Customer Support</a> or call us at <br> 123-456-7890</p>
+                        <div class="social-icons">
+                            <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                            <a href="#"><img src="images/insta-icon.png" alt="Instagram"></a>
+                            <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                            <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+                        </div>
+                    </div>
+            
+                    <div class="footer-section">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="#">Deals</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Beverages</a></li>
+                            <li><a href="#">Household</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                            <li><a href="#">Most Popular</a></li>
+                            <li><a href="#">My Orders</a></li>
+                            <li><a href="#">Book Online</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-section">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#">Vegetables</a></li>
+                            <li><a href="#">Bakery</a></li>
+                            <li><a href="#">Wine</a></li>
+                            <li><a href="#">Dairy & Eggs</a></li>
+                            <li><a href="#">Munchies</a></li>
+                            <li><a href="#">Soft Drinks</a></li>
+                            <li><a href="#">Cleaning Supplies</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-section">
+                        <h3>Info</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Locations</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-section">
+                        <h3>My Choice</h3>
+                        <ul>
+                            <li><a href="#">Favorites</a></li>
+                            <li><a href="#">My Orders</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="footer-bottom">
+                    <div class="payment-methods">
+                        <img src="images/mastercard.jpg" alt="Mastercard">
+                        <img src="images/visa.png" alt="Visa">
+                        <img src="images/amex.png" alt="American Express">
+                        <img src="images/paypal.png" alt="Paypal">
+                    </div>
+            
+                    <div class="footer-links">
+                        <a href="#">Shipping & Returns</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Payment Methods</a>
+                    </div>
+                </div>
+            </footer>
+            <p>&copy; 2024 Food Store. All rights reserved.</p>
+        </footer>
+    </footer>
+
+    <script src="feedback.js"></script>
+</body>
+</html>
