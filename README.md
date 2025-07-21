@@ -34,12 +34,10 @@ The platform is tailored to meet the fast-paced demands of daily life by helping
    git clone https://github.com/your-username/flare.git
    cd flare
 2. Install dependencies:
-
-npm install
+   npm install
 3. Start the server:
-
-npm start
+   npm start
 4. Open in browser:
-http://localhost:3000
+   http://localhost:3000
 ## 📌 Project Context
 Flare was developed as a team project under faculty guidance, with a focus on real-world usability and clean interface design. The goal was to integrate core e-commerce functionality with a focus on clarity, responsiveness, and smooth user experience.
