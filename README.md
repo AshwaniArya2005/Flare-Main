@@ -4,8 +4,7 @@
 
 The platform is tailored to meet the fast-paced demands of daily life by helping users discover relevant products, manage their carts, and complete secure checkouts with ease. With user-centric features and a responsive design, Flare brings together convenience and functionality in one seamless web application.
 
-Link: https://www.flare-tau.vercel.app
-
+Link: https://flare-tau.vercel.app/
 ## 🚀 Key Features
 
 - 🔐 **Secure Authentication**: Users can sign up, log in, and manage their sessions securely using Firebase.
